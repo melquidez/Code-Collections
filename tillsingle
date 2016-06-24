@@ -1,0 +1,12 @@
+<?php
+
+function tillsingle($n) {
+	$c = preg_split("/\^/",$n);
+	$n = preg_match("/\^/", $n) ? pow($c[0], $c[1]) : $n;
+    while(strlen($n) > 1)
+        $n = array_sum(str_split($n));
+    return (int)$n;
+}
+
+
+echo tillsingle("49^1"); // output = 4
