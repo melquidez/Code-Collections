@@ -1,0 +1,9 @@
+<?php
+
+function Base20($n) {
+    return strtoupper(base_convert($n, 10, 20));
+}
+
+
+
+echo Base20(30); // output: 1A
